@@ -8,7 +8,6 @@ import logging
 import pyeda
 from graphviz import Digraph
 from pyeda.inter import *
-from anytree import Node, RenderTree
 from itertools import product
 
 def loggingSetup():
@@ -16,8 +15,6 @@ def loggingSetup():
     root.setLevel(logging.DEBUG)
     formatter = logging.Formatter("[%(levelname)s: %(funcName)25s() ] %(message)s")
     
-    # debug_file_handler = logging.FileHandler(filename='fado-debug.log', mode='w')
-    # debug_file_handler.setLevel(logging.DEBUG)
     info_file_handler = logging.FileHandler(filename='parse.log', mode='w')
     info_file_handler.setLevel(logging.INFO)
     stdout_handler = logging.StreamHandler(sys.stdout)
@@ -760,7 +757,7 @@ if __name__ == '__main__':
             logging.info("Case 7: DNF -- `OR(AND(<list of variables>),)`")
             dnf,  = espresso_exprs(f1.to_dnf())
             cnf = dnf.to_cnf()
-            print("dnf: {}\ncnf: {}".format(dnf, cnf))
+            logging.info("dnf: {}\ncnf: {}".format(dnf, cnf))
             #! Compare which solution leads to less gate number, between nand solution and nor solution
             
             # 1. Standard Output Format -> func.v -----------------------------------
