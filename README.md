@@ -2,7 +2,7 @@
 Logic Expression Compiler, with Logic Minimization, to NAND/NOR Implementation
 
 ## Introduction
-This is one of the course project materials for HKUST-gz MICS 6000H Logic Design Automation of Digital Systems. This project is alive, maintained by <linfeng.du@connect.ust.hk>. Any discussion or suggestion would be greatly appreciated!
+This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Design Automation of Digital Systems](https://hongcezh.people.ust.hk/talk/mics6000h-logic-design-automation-of-digital-systems/). This project is alive, maintained by <linfeng.du@connect.ust.hk>. Any discussion or suggestion would be greatly appreciated!
 
 ## Requirements
 * Python 3.9
