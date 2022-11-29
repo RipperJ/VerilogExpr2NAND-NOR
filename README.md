@@ -46,11 +46,24 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
     * &/|(reduction)->  A [itself]
 
 ## References and Interesting Links
-* [PLY Document](https://www.dabeaz.com/ply/ply.html)
-* [Verilog Operators](https://class.ece.uw.edu/cadta/verilog/operators.html)
-* [Boolean Expr Calculator (including NAND/NOR)](https://www.dcode.fr/boolean-expressions-calculator)
-* [Blog: A Quick Tutorial on Using Vivado Logic Simulation Tools](https://itsembedded.com/dhd/vivado_sim_1/)
-* [From 3-input NAND to 2-input NAND gate](https://electronics.stackexchange.com/q/211801)
-* [From SOP/POS (DNF/CNF) to NAND/NOR implmentation](https://www.cecs.uci.edu/~gajski/eecs31/slides/Digital_Design_-_Tech_Mapping_yajaCH5w.pdf#page=4)
-* [pyeda Formal Equivalence Checking](https://pyeda.readthedocs.io/en/latest/expr.html#formal-equivalence)
-* [Draw Logics with Python](https://schemdraw.readthedocs.io/en/latest/elements/logic.html)
+* Documents:
+    * [PLY Document](https://www.dabeaz.com/ply/ply.html)
+    * [Python EDA (pyeda) Document](https://pyeda.readthedocs.io/en/latest/index.html)
+        * [pyeda Formal Equivalence Checking](https://pyeda.readthedocs.io/en/latest/expr.html#formal-equivalence)
+    * [Draw Logics with Python](https://schemdraw.readthedocs.io/en/latest/elements/logic.html)
+    * [AMD Xilinx Vivado Logic Simulation Docs](https://www.xilinx.com/support/documentation-navigation/design-hubs/dh0010-vivado-simulation-hub.html)
+* Blog:
+    * [A Quick Tutorial on Using Vivado Logic Simulation Tools](https://itsembedded.com/dhd/vivado_sim_1/)
+* Webpages Intros:
+    * [Verilog Operators](https://class.ece.uw.edu/cadta/verilog/operators.html)
+    * [From 3-input NAND to 2-input NAND gate](https://electronics.stackexchange.com/q/211801)
+    * [wiki NAND logic](https://en.wikipedia.org/wiki/NAND_logic) and [wiki NOR logic](https://en.wikipedia.org/wiki/NOR_logic)
+* Slides:
+    * [From SOP/POS (DNF/CNF) to NAND/NOR implmentation](https://www.cecs.uci.edu/~gajski/eecs31/slides/Digital_Design_-_Tech_Mapping_yajaCH5w.pdf#page=4)
+    * [NAND/NOR Impl, by Ali Mustafa](https://digitallogicdesign.weebly.com/uploads/1/3/5/4/13541180/lecture_nand_nor.pdf)
+* GitHub links:
+    * [Quine McCluskey (Tabulation) Method in Python/C++](https://github.com/mohdomama/Quine-McCluskey)
+    * [Espresso Logic Minimizer](https://github.com/classabbyamp/espresso-logic)
+* Online tools:
+    * [Online Verilog Simulator](https://www.jdoodle.com/execute-verilog-online/)
+    * [Boolean Expr Calculator (including NAND/NOR)](https://www.dcode.fr/boolean-expressions-calculator)
