@@ -17,6 +17,8 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
         * `xsim`
 
 ## How to Run
+* Step 0: `./clean.sh`
+    * Clean all cached files, and make sure the tool is not using outdated intermediate results. (Although our tool would overwrite intermediate files in most cases, this is a safer choice.)
 * Step 1: Make sure you have a valid Verilog expression in [test.v](./test.v)
     * We currently only support the following operators
         * BITWISE_AND:  "&" : bitwise AND (binary) / reduction AND (unary)
@@ -52,8 +54,9 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
         * [pyeda Formal Equivalence Checking](https://pyeda.readthedocs.io/en/latest/expr.html#formal-equivalence)
     * [Draw Logics with Python](https://schemdraw.readthedocs.io/en/latest/elements/logic.html)
     * [AMD Xilinx Vivado Logic Simulation Docs](https://www.xilinx.com/support/documentation-navigation/design-hubs/dh0010-vivado-simulation-hub.html)
-* Blog:
+* Blogs:
     * [A Quick Tutorial on Using Vivado Logic Simulation Tools](https://itsembedded.com/dhd/vivado_sim_1/)
+    * [NAND-Only Circuit Implementation (geeks-for-geeks)](https://www.geeksforgeeks.org/implementing-any-circuit-using-nand-gate-only/)
 * Webpages Intros:
     * [Verilog Operators](https://class.ece.uw.edu/cadta/verilog/operators.html)
     * [From 3-input NAND to 2-input NAND gate](https://electronics.stackexchange.com/q/211801)

@@ -469,14 +469,19 @@ if __name__ == '__main__':
             )
             
         # 3. Simulation File -> sim_func.v -----------------------------------
+        all_vars = sorted(set(re.findall(t_IDENTIFIER, test_expr)))
+        l = []
+        for _ in all_vars:
+            l.append([0, 1])
+        l = list(product(*l))
         with open("sim_func.v", "w") as out_sim_f:
             out_sim_f.write(
                 sim_v_template.format(
-                    "",
+                    "reg {};".format(", ".join([str(_) for _ in all_vars])),
                     1,
                     "",
                     test_expr,
-                    ""
+                    "    if (out != out_golden) begin\n        error_count = error_count + 1;\n    end\n"
                 )
             )
     # [Case 2] Constant 1, e.g., "a || ~a --> 1'b1"
@@ -504,14 +509,19 @@ if __name__ == '__main__':
             )
             
         # 3. Simulation File -> sim_func.v -----------------------------------
+        all_vars = sorted(set(re.findall(t_IDENTIFIER, test_expr)))
+        l = []
+        for _ in all_vars:
+            l.append([0, 1])
+        l = list(product(*l))
         with open("sim_func.v", "w") as out_sim_f:
             out_sim_f.write(
                 sim_v_template.format(
-                    "",
+                    "reg {};".format(", ".join([str(_) for _ in all_vars])),
                     1,
                     "",
                     test_expr,
-                    ""
+                    "    if (out != out_golden) begin\n        error_count = error_count + 1;\n    end\n"
                 )
             )
     else:
@@ -558,7 +568,7 @@ if __name__ == '__main__':
                 for i in range(len(all_vars)):
                     sim_str += "    {} = {};\n".format(str(all_vars[i]), values[i])
                 sim_str += "    #2;"
-                sim_str += "error_count = (out == out_golden) ? error_count : error_count + 1;\n"
+                sim_str += 'error_count = (out == out_golden) ? error_count : error_count + 1;\n    $display("{}out: %b, out_golden: %b", {}out, out_golden);\n'.format("".join([str(_) + ": %b, " for _ in f2m.inputs]), "".join([str(_) + ", " for _ in f2m.inputs]))
             with open("sim_func.v", "w") as out_sim_f:
                 out_sim_f.write(
                     sim_v_template.format(
@@ -605,7 +615,7 @@ if __name__ == '__main__':
                 for i in range(len(all_vars)):
                     sim_str += "    {} = {};\n".format(str(all_vars[i]), values[i])
                 sim_str += "    #2;"
-                sim_str += "error_count = (out == out_golden) ? error_count : error_count + 1;\n"
+                sim_str += 'error_count = (out == out_golden) ? error_count : error_count + 1;\n    $display("{}out: %b, out_golden: %b", {}out, out_golden);\n'.format("".join([str(_) + ": %b, " for _ in f2m.inputs]), "".join([str(_) + ", " for _ in f2m.inputs]))
             with open("sim_func.v", "w") as out_sim_f:
                 out_sim_f.write(
                     sim_v_template.format(
