@@ -16,6 +16,17 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
         * `xelab`
         * `xsim`
 
+## Workflow
+* Front-end:
+    * lex
+    * yacc
+* Middle-end
+    * 2-level logic minimization with ESPRESSO
+    * NAND/NOR minimization
+* Back-end
+    * Verilog code generation
+    * *testbench generation*
+
 ## How to Run
 * Step 0: `./clean.sh`
     * Clean all cached files, and make sure the tool is not using outdated intermediate results. (Although our tool would overwrite intermediate files in most cases, this is a safer choice.)

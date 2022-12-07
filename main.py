@@ -696,7 +696,7 @@ if __name__ == '__main__':
                     )
                 )
                 
-        # [Case 6] Single-Level OR(<list of variables>), e.g., (A | B | C)
+        # [Case 6] Single-Level OR(<list of variables>), e.g., (A | B | C), a|||b
         elif isinstance(f2m, pyeda.boolalg.expr.OrOp) and str(f2).find("And") == -1:
             logging.info("Case 6: Single-Level OR(<list of variables>)")
             # 1. Standard Output Format -> func.v -----------------------------------
