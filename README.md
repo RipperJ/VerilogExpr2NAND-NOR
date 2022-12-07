@@ -21,7 +21,7 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
     * lex
     * yacc
 * Middle-end
-    * 2-level logic minimization with ESPRESSO
+    * 2-level AND/OR logic minimization with ESPRESSO
     * NAND/NOR minimization
 * Back-end
     * Verilog code generation
