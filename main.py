@@ -767,7 +767,7 @@ if __name__ == '__main__':
             logging.info("Case 7: DNF -- `OR(AND(<list of variables>),)`")
             dnf,  = espresso_exprs(f1.to_dnf())
             cnf = dnf.to_cnf()
-            logging.info("dnf: {}\ncnf: {}".format(dnf, cnf))
+            logging.info("ori: {}\ndnf: {}\ncnf: {}".format(f1, dnf, cnf))
             #! Compare which solution leads to less gate number, between nand solution and nor solution
             
             # 1. Standard Output Format -> func.v -----------------------------------

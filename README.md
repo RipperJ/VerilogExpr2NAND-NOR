@@ -18,8 +18,8 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
 
 ## Workflow
 * Front-end:
-    * lex
-    * yacc
+    * lex (lexer)
+    * yacc (parser)
 * Middle-end
     * 2-level AND/OR logic minimization with ESPRESSO (with pyeda package)
     * NAND/NOR minimization
@@ -32,12 +32,12 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
     * Clean all cached files, and make sure the tool is not using outdated intermediate results. (Although our tool would overwrite intermediate files in most cases, this is a safer choice.)
 * Step 1: Make sure you have a valid Verilog expression in [test.v](./test.v)
     * We currently only support the following operators
-        * BITWISE_AND:  "&" : bitwise AND (binary) / reduction AND (unary)
-        * BITWISE_OR:   "|" : bitwise OR  (binary) / reduction OR  (unary)
-        * BITWISE_NEG:  "~" : bitwise NEG (unary)       [returns the complement of a variable]
-        * LOGICAL_AND:  "&&": logical AND (binary)
-        * LOGICAL_OR:   "||": logical OR  (binary)
-        * LOGICAL_NEG:  "!" : logical NEG (unary)       [returns a single bit]
+        * BITWISE_AND:  `"&"` : bitwise AND (binary) / reduction AND (unary)
+        * BITWISE_OR:   `"|"` : bitwise OR  (binary) / reduction OR  (unary)
+        * BITWISE_NEG:  `"~"` : bitwise NEG (unary)       [returns the complement of a variable]
+        * LOGICAL_AND:  `"&&"`: logical AND (binary)
+        * LOGICAL_OR:   `"||"`: logical OR  (binary)
+        * LOGICAL_NEG:  `"!"` : logical NEG (unary)       [returns a single bit]
 * Step 2: `python main.py test.v`
     * This step generates the following files, including NAND/NOR implementation and the testbench.
         * [func.v](./func.v): self-defined format -- "NAND g0(in1, in2, out);"
@@ -47,7 +47,7 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
     * This step triggers the simulation flow and gives standard output in the terminal.
 
 ## Testcases
-* We here provide some examples of Boolean expressions for test. You can write any expression as long as the operators are supported, and paste into [test.v](./test.v)), then `python main.py test.v` to run the code generation. 
+* We here provide some examples of Boolean expressions for test. You can write any expression as long as the operators are supported, and paste into [test.v](./test.v), then `python main.py test.v` to run the program. 
     1. `~(!a | b)`
     2. `b | (b&c)`
     3. `a | !a & b`
