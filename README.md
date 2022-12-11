@@ -46,6 +46,25 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
 * Step 3: `./runsim.sh`
     * This step triggers the simulation flow and gives standard output in the terminal.
 
+## Testcases
+* We here provide some examples of Boolean expressions for test. You can write any expression as long as the operators are supported, and paste into [test.v](./test.v)), then `python main.py test.v` to run the code generation. 
+    1. `~(!a | b)`
+    2. `b | (b&c)`
+    3. `a | !a & b`
+    4. `~(a&b)`
+    5. `!(c || d)`
+    6. `a&b&c | (a&b&!d) | (a&b&~e)`
+    7. `a & ~a`
+    8. `a || ~a`
+    9. `a & (b || ~b)`
+    10. `~a & (b || ~b)`
+    11. `A & B & C`
+    12. `A | B | C`
+    13. `a|||b`
+    14. `~a & ~b & ~c | ~a & ~b & c | a & ~b & c | a & b & c | a & b & ~c`
+    15. `(!a || (a && b) || (a && c) || (b && !c)) && ~b | | 1'h0 & &c`
+    16. `~a & b & c | ~d | ~b & d | a & d & c`
+
 ## NAND/NOR 123
 * NAND logic:
     * ~/!: NOT(A)   ->  A NAND A
