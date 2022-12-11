@@ -67,15 +67,15 @@ This is one of the course project materials for [HKUST-GZ MICS 6000H Logic Desig
 
 ## NAND/NOR 123
 * NAND logic:
-    * ~/!: NOT(A)   ->  A NAND A
-    * &/&&: A AND B ->  (A NAND B) NAND (A NAND B)
-    * |/||: A OR B  ->  (A NAND A) NAND (B NAND B)
-    * &/|(reduction)->  A [itself]
+    * `~`/`!`: NOT(A)   ->  A NAND A
+    * `&`/`&&`: A AND B ->  (A NAND B) NAND (A NAND B)
+    * `|`/`||`: A OR B  ->  (A NAND A) NAND (B NAND B)
+    * `&`/`|`(reduction)->  A [itself]
 * NOR logic:
-    * ~/!: NOT(A)   ->  A NOR A
-    * &/&&: A AND B ->  (A NOR A) NOR (B NOR B)
-    * |/||: A OR B  ->  (A NOR B) NOR (A NOR B)
-    * &/|(reduction)->  A [itself]
+    * `~`/`!`: NOT(A)   ->  A NOR A
+    * `&`/`&&`: A AND B ->  (A NOR A) NOR (B NOR B)
+    * `|`/`||`: A OR B  ->  (A NOR B) NOR (A NOR B)
+    * `&`/`|`(reduction)->  A [itself]
 
 ## References and Interesting Links
 * Documents:
