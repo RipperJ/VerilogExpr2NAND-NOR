@@ -1,0 +1,73 @@
+In project 1, you are asked to build a parser that can parse Verilog expressions. You can use Flex+Bison or PLY.  You can also try ANTLR if you want. You can even start from scratch without using any of these. We will not limit the way you achieve the goal.
+
+The following features are mandatory:
+
+Support for Verilog constant
+Support for Verilog identifiers
+Support for parentheses: "( .... )"   (and also nested parentheses)
+Support for the following operators
+&	|	!	~	&&	||
+Your tool should be able to distinguish ill-formed expressions from those legal expressions and report the syntax errors. It should be able to print a parsing tree upon success.
+
+You may add the following features (optional):
+
+Support for more operators (e.g., arithmetic operators, relational operators)
+ 
+
+Please submit your code (packed in a zip archive) and a write-up describing the following:
+
+the features of your parser
+the lexing rules and the grammar you used
+any conflict(s) in parser generation and how did your solve the conflict(s)
+an example of the AST generated from the parser (screenshot)
+the tests you used to check your parser works as expected (along with the screenshot of the output)
+
+=================
+
+In Project 2, you are asked to extend your parser in Project 1 with a logic synthesizer. In Project 1, your parser can already parse basic logic expressions. Now we would like to convert the basic logic expressions into circuits with only 2-input NAND and 2-input NOR gates (you can use the combination of NAND and NOR gates).
+
+Below is an example of implementing expression "a&b":
+
+---
+module fun(input a, input b, output out);
+wire t1;
+NAND g1(a,b,t1);
+NAND g2(t1,t1,out);
+endmodule
+--- 
+
+For the NAND and NOR gates, you can assume the first two arguments are the inputs, and the last argument is the output. The generated output should be a valid Verilog netlist (with correct syntax and all wires are defined before used). You may use other libraries or external tools to help you simplify your logic functions. 
+
+We will use a set of simple logic expressions to test your tool. You should ensure that the logic function is correctly implemented. You will get 80% credit based on the functional correctness. The rest 20% credit is based on the number of NAND/NOR gates used.
+
+Please submit your code and a short write-up (packed in a zip archive). The write-up should explain the following:
+
+* how to compile and run your code?
+* how do you map the logic into an implementation of NAND/NOR gates?
+* what are the testcases you use to ensure functional correctness?
+* what's your method of reducing the number of NAND/NOR gates?
+* have you used any external tools/libraries?
+
+Test case 1
+
+~(!a | b)
+
+Test case 2
+
+b | (b&c)
+
+Test case 3
+
+a | !a & b
+
+Test case 4
+
+~(a&b)
+
+Test case 5
+
+!(c || d)
+
+Test case 6
+
+a&b&c | (a&b&!d) | (a&b&~e)
